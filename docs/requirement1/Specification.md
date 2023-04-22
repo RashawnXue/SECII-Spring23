@@ -119,7 +119,7 @@
 ![](https://rashawn.oss-cn-shanghai.aliyuncs.com/course/SECII/docs/requirement1/ui3.png)
 - **UI4** 铁路管理
   - **UI4.1** 铁路路线信息管理![](https://rashawn.oss-cn-shanghai.aliyuncs.com/course/SECII/docs/requirement1/ui4.png)
-  - **UI4.2** 路线管理![](https://rashawn.oss-cn-shanghai.aliyuncs.com/course/SECII/docs/requirement1/ui5.png)
+  - **UI4.2** 车票设置![](https://rashawn.oss-cn-shanghai.aliyuncs.com/course/SECII/docs/requirement1/ui5.png)
 
 ### 3.1.2 通信接口
 
