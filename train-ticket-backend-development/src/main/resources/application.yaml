@@ -1,0 +1,42 @@
+
+
+spring:
+  jackson:
+    serialization:
+      write-dates-as-timestamps: true
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/l23o6
+    username: postgres
+    password: 123456
+
+
+  jpa:
+    show-sql: true
+    database: postgresql
+    hibernate:
+      ddl-auto: update
+
+
+sa-token:
+#   token-name: token
+#   # 30 days
+#   timeout: 2592000
+#   # no expiration
+#   activity-timeout: -1
+#   # multi login
+#   is-concurrent: true
+#   is-share: true
+  token-style: uuid
+  is-log: true
+
+alipay:
+  appId: 9021000122699481
+  notifyUrl: http://localhost:5173/alipay/success
+  returnUrl: http://localhost:5173/alipay/success
+  signType: RSA2
+  charset: utf-8
+  gatewayUrl: https://openapi.alipaydev.com/gateway.do
+  app-private-key: MIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDNQBFuvdNdtxRSGoAPLScUPCIoOSvz3FYxmtlt4lteWmvGhNC7s7u7/7CRwFHXBE9WJxDRtCvBY35/zhDDIXMU+sXzQxl70Cu21YPfBvockl4OgBwsXU8XT9MI/NRxGw+QZe1X+aNJebRMePyWn4/G8qcidGLh0Ya/tvyn11CybDPbdo0wTEWAgarKF343HFsxlNRQ5lFezVz6D412D+P7so01fopjcK0ETZxGyua4uV0JKq8Qu+Bj19tA9oIkZPagCgpxtPyqXGVl0pjbb+aZI53FbDsp1P+6HsFTOxst97xV3VtKXwZhF/UtEfStJi2oCBqS+D5hiET/Ek6lctWzAgMBAAECggEBAJoV7wBkIbnJJ8g7fMfn7d6TBlGMGiMI1uyGg5Sqyk0bNK3kJ4/Cbr3ERpok90ukQKs8yLOlvvN/7geke5ECG5M0cEcfqJH6xdaMlGNqqXmpqFLaekwUALxPgO7OX+5JknWlD3lsP9l5NJH0givRve5tXGvRVCqTUcW7ahHW4w4ONPPDplh80evbXUTeEjMraTOCGz3oyuJZaFk/DS60hTlzS4Qdt+GbqJ9afOvF+Cbm1Zu416e5ec8Z7X4RdAcgC3wAxOYx8mNmKQbKVEL+2GtoA2Znt2z0Mgwe2AgWFn3XqxFJAHsaPJ+j/pAUoLZj8VtEcKISdv0uI2SgnuVFeAECgYEA5V5syz3l8+G2X973hDxc2yVCD+ZItoOehcK7Zr+vyFM71cb15dVuJr1PDmc/Wy6AIcH8CZkuZsPxqgBG/GF94QJeGxlIPVq+kdEx06oY9Yl/JxvL7nN4iloiLj/WhB9PrTL6k7rUmN1OVNYYobgGnyTYuR5JSom50QqaQVXPa0ECgYEA5RTDBiZ/vWLzNMWvjKnBmbIE7t/64npr+astUoO/09J2MPDxD8lu8t0qMpiuvYHnVGgod9eJTfS2rFdAnrE7Z7kUvptS5P8RO363G4n8oxV3w23gaj4VsxAkri4LGf4EAZpU01xzk5fDzts+qzsH33ABx6fItqeTrI1MfiuRR/MCgYEAzItkYesVQmQrC1v/R0G9XQDg5OTsOzctCwQZswuGaxMu7Pm9F/U5gfqYobOZYGsbgP9JEBY2txZOUNhmdXNLmnlOCsSFE5H1GHyB/sxV7cFsTygOuNroyBiRGsV7O9/gYghwRYX7SUcyL52t4aoG3a0ySAOmQH6J4s2dul4X1wECgYA0/bB/Y7h43sLTmkcZiss1+nAZscYfTaJchrRdOgzNuwmMGLAqrrXziCWSvq7tN3eDlvSFhF5Goiz/gM955hWP0Mhzrwpl3nrmAFHrFOhT8Uta8bfP27y5Ryq1AAGhaZkTpdepbOFvatPord65TVZs4UQII0/SsMEAUU84gGuC8QKBgQCvKto/iVoo/5C0HSsWjqQrk2v2ctRynGkamv8M13zQ+Ha/S9yNMxL49mFz66LzvPQoOxkfp6Cw+KoLqSKzml7LYN1P+10f0cNUfL+R5KsHstabRrGS7xyzrbkSmDDzgbYlZEGc6RZr50N4WjXJnPWfRZVItfT+RUTRGI6S1lShLw==
+  alipay-public-key: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzUARbr3TXbcUUhqADy0nFDwiKDkr89xWMZrZbeJbXlprxoTQu7O7u/+wkcBR1wRPVicQ0bQrwWN+f84QwyFzFPrF80MZe9ArttWD3wb6HJJeDoAcLF1PF0/TCPzUcRsPkGXtV/mjSXm0THj8lp+PxvKnInRi4dGGv7b8p9dQsmwz23aNMExFgIGqyhd+NxxbMZTUUOZRXs1c+g+Ndg/j+7KNNX6KY3CtBE2cRsrmuLldCSqvELvgY9fbQPaCJGT2oAoKcbT8qlxlZdKY22/mmSOdxWw7KdT/uh7BUzsbLfe8Vd1bSl8GYRf1LRH0rSYtqAgakvg+YYhE/xJOpXLVswIDAQAB
